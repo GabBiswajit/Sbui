@@ -1,0 +1,57 @@
+#Set Your Details
+
+Form-1: "§l§bISLAND MENU\n§r§l§d» §r§8Tap To Open"
+Form-1-CMD: "skyblock"
+Form-1-Img: "https://www.clipartmax.com/png/full/162-1624622_brenz-block-is-a-skyblock-minecraft-logo.png"
+
+Form-2: "§l§bYOUR PROFILE\n§r§l§d» §r§8Tap To Open"
+Form-2-CMD: "profile"
+Form-2-Img: "https://icons-for-free.com/iconfiles/png/512/profile+profile+page+user+icon-1320186864367220794.png"
+
+Form-3: "§l§bSKILLS MENU\n§r§l§d» §r§8Tap To Open"
+Form-3-CMD: "skill"
+Form-3-Img: "https://cdn-icons-png.flaticon.com/512/3095/3095221.png"
+
+Form-4: "§l§bRECIPES BOOK\n§r§l§d» §r§8Tap To Open"
+Form-4-CMD: "recipes"
+Form-4-Img: "https://www.clipartmax.com/png/full/82-828417_recipe-book-icon-recipe-book-png.png"
+
+Form-5: "§l§bSHOP MENU\n§r§l§d» §r§8Tap To Open"
+Form-5-CMD: "shop"
+Form-5-Img: "https://cdn-icons-png.flaticon.com/512/273/273177.png"
+
+Form-6: "§l§bQUEST MENU\n§r§l§d» §r§8Tap To Open"
+Form-6-CMD: "quest"
+Form-6-Img: "https://cdn-icons-png.flaticon.com/512/1673/1673620.png"
+
+Form-7: "§l§bKIT MENU\n§r§l§d» §r§8Tap To Open"
+Form-7-CMD: "kit"
+Form-7-Img: "https://www.clipartmax.com/png/full/283-2833130_small-business-toolkit-icon-business-toolkit-icon.png"
+
+Form-8: "§l§bJOB MENU\n§r§l§d» §r§8Tap To Open"
+Form-8-CMD: "job"
+Form-8-Img: "https://cdn-icons-png.flaticon.com/512/1803/1803330.png"
+
+Form-9: "§l§bENDER CHEST\n§r§l§d» §r§8Tap To Open"
+Form-9-CMD: "ec"
+Form-9-Img: "https://www.clipartmax.com/png/full/290-2902217_brasschest-minecraft-chest-png.png"
+
+Form-10: "§l§bAUCTION HOUSE\n§r§l§d» §r§8Tap To Open"
+Form-10-CMD: "ah"
+Form-10-Img: "https://cdn-icons-png.flaticon.com/512/345/345629.png"
+
+Form-11: "§l§bBANK MENU\n§r§l§d» §r§8Tap To Open"
+Form-11-CMD: "bank"
+Form-11-Img: "https://raw.githubusercontent.com/ElectroGamesYT/BankUI/5fc9b197a614d37a81881398a23ade65e68ae513/icon.png"
+
+Form-12: "§l§bBAZAAR MENU\n§r§l§d» §r§8Tap To Open"
+Form-12-CMD: "bazzar"
+Form-12-Img: "https://icons.iconarchive.com/icons/rockettheme/ecommerce/256/shop-icon.png"
+
+Form-13: "§l§bFAST TRAVEL\n§r§l§d» §r§8Tap To Open"
+Form-13-CMD: "travel"
+Form-13-Img: "https://cdn.icon-icons.com/icons2/2239/PNG/512/world_travel_icon_134812.png"
+
+Form-14: "§l§bSETTINGS\n§r§l§d» §r§8Tap To Open"
+Form-14-CMD: "settings"
+Form-14-Img: "https://cdn0.iconfinder.com/data/icons/the-essentials-ultra-colour-collection/60/The_Essentials_-_Ultra_Color_-_004_-_Settings-1024.png"
