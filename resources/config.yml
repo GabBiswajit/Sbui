@@ -1,5 +1,11 @@
 #Set Your Details
 
+
+skyblockMenu:
+  itemID: "nether_star"
+  itemName: "§r§l§bASSISTANT MENU  §r§7(Right-Click)"
+  itemLore: []
+  
 Form-1: "§l§bISLAND MENU\n§r§l§d» §r§8Tap To Open"
 Form-1-CMD: "skyblock"
 Form-1-Img: "https://www.clipartmax.com/png/full/162-1624622_brenz-block-is-a-skyblock-minecraft-logo.png"
