@@ -9,33 +9,33 @@ use pocketmine\command\CommandSender;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\player\PlayerInteractEvent;
-use pocketmine\event\inventory\InventoryTransactionEvent;
-use pocketmine\event\player\PlayerDropItemEvent;
 use pocketmine\utils\Config;
-use pocketmine\scheduler\ClosureTask;
 use pocketmine\item\Item;
-use pocketmine\item\VanillaItems;
+use pocketmine\item\StringToItemParser;
 use pocketmine\Server;
 use jojoe77777\FormAPI\SimpleForm;
 
 class Main extends PluginBase implements Listener {
-
-  
-
-  public function onEnable() : void {
-    $this->saveResource("config.yml");
-    $this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML, array());
-    $this->getServer()->getPluginManager()->registerEvents($this, $this);
-  }
-
-  
+    
+    private Config $config;
+    
+    protected function onEnable() : void {
+        $this->saveDefaultConfig();
+        $this->config = $this->getConfig();
+        $this->getServer()->getPluginManager()->registerEvents($this, $this);
+    }
 
   public function onJoin(PlayerJoinEvent $event) {
       $sender = $event->getPlayer();
-      
-      $item = VanillaItems::NETHER_STAR();
-      $item->setCustomName("§r§l§bASSISTANT MENU  §r§7(Right-Click)");
+      $itemID = $this->config->getNested('skyblockMenu.itemID');
+      $itemName = $this->config->getNested('skyblockMenu.itemName');
+      $itemLore = $this->config->getNested('skyblockMenu.itemLore');
+      $item = StringToItemParser::getInstance()->parse($itemID);
+      $item->setCustomName($itemName);
+      $item->setLore($itemLore);
       $item->getNamedTag()->setString("skyblockmenu", "menu");
+      // better way to lock item..
+      $item->getNamedTag()->setByte("minecraft:item_lock", 1);
       $sender->getInventory()->setItem(8, $item, true);
     }
 
@@ -48,20 +48,7 @@ class Main extends PluginBase implements Listener {
       }
     }
 
-  public function onTransaction(InventoryTransactionEvent $event) {
-      $transaction = $event->getTransaction();
-      foreach ($transaction->getActions() as $action) {
-
-        $item = $action->getSourceItem();
-        $source = $transaction->getSource();
-
-        if ($source instanceof Player && $item === VanillaItems::NETHER_STAR() && $item->getCustomName() === "§r§l§bASSISTANT MENU  §r§7(Right-Click)" && $item->getCount() === 1) {
-          $event->cancel(true);
-        }
-      }
-    }
-
-  public function ccsbmenu(Player $player) {
+  public function ccsbmenu(Player $player): void {
   	
     $form = new SimpleForm(function (Player $player, int $data = null) {
             if ($data === null) {
@@ -144,7 +131,6 @@ class Main extends PluginBase implements Listener {
       $form->addButton($this->config->get("Form-12"), 1, $this->config->get("Form-12-Img"));
       $form->addButton($this->config->get("Form-13"), 1, $this->config->get("Form-13-Img"));
       $form->addButton($this->config->get("Form-14"), 1, $this->config->get("Form-14-Img"));
-      $form->sendtoPlayer($player);
-        return $form;
+      $player->sendForm($form);
      }
 }
