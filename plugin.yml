@@ -1,7 +1,5 @@
 name: SBMenuUI
-api: 4.0.0
-main: Biswajit\Main
+api: 5.0.0
+main: Biswajit\SBUI\Main
 version: 1.0.0
 author: Biswajit
-description: A Public Skyblock Menu!
-website: https://discord.gg/ZyXRautqYR
